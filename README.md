@@ -29,8 +29,10 @@
 **git clone 複製GitHub網址 ./ 點代表當前的目錄**
 如果你換電腦了,裡面是空的,可以clone一份到電腦裡面
 
+**點選manage 到command platte**
+輸入大於 >display 更改語言設定,如果看不懂的英文,可以調整為中文
+
 ## 如此一來,就算在不同電腦,也可以快速建立
 End
 
-點選manage 到command platte
-輸入大於 >display 更改語言設定,如果看不懂的英文,可以調整為中文
+
