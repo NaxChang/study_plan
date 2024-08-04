@@ -1,3 +1,4 @@
+# 240802
 # windows建立python虛擬環境,快速clone<br>
 **pip install virtualenv**<br> 
 安裝虛擬環境<br>
