@@ -14,10 +14,7 @@ df.columns = ['年', '入境人數','出境人數','過境人數','totle']
 
 df = df.drop('totle',axis=1)
 
-df = df.set_index('年')
-df['入境人數'] /= 10000   # df['入境人數'] = df['入境人數']/10000
-df['出境人數'] /= 10000
-df['過境人數'] /= 10000 
-df.plot.bar(ylabel='人數(萬)', title='桃園機場近幾年出入境人數統計圖')
-
+df_long = df.melt(id_vars='年', var_name='方法', value_name='人數')
+df_long['人數(萬)'] = df_long['人數']/10000
+sns.barplot(data=df_long, x='年', y='人數(萬)', hue='方法')
     
