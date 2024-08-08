@@ -1,7 +1,7 @@
-import requests
-import pandas as pd
-import seaborn as sns
 import matplotlib.pyplot as plt
+import pandas as pd
+import requests
+import seaborn as sns
 
 sns.set_theme(
     rc={"figure.dpi": 300, "font.sans-serif": "Microsoft JhengHei"},
