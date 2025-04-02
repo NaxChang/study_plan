@@ -9,31 +9,32 @@
 
 import random
 
-start = 1
-end = 100
-ans = random.randint(start, end)
-guess_count = 0
-print(ans)
 
-while True:
-    user_input = input(f"請輸入一個介於 {start } ~ {end} 之間的整數: ")
+def guess_number_game():
+    start = 1
+    end = 100
+    guess_count = 0
+    ans = random.randint(start, end)
+    print(ans)
+    while True:
+        user_input = input(f"輸入一個 {start} ~ {end} 的數字: ")
+        try:
+            user_input = int(user_input)
+        except ValueError:
+            print("請輸入一個整數")
+            continue
+        if not (start <= user_input <= end):
+            print(f"請輸入介於 {start} 與 {end} 之間的數字")
+            continue
+        guess_count += 1
 
-    try:
-        user_input = int(user_input)
+        if user_input == ans:
+            print(f"恭喜答對, 共猜了 {guess_count} 次")
+            break
+        if user_input < ans:
+            start = user_input + 1
+        if user_input > ans:
+            end = user_input - 1
 
-    except ValueError:
-        print("請輸入一個整數: ")
-        continue
 
-    if not (start <= user_input <= end):
-        print(f"請輸入介於{start}與{end}之間的數字")
-        continue
-    guess_count += 1
-    if user_input == ans:
-        print(f"恭喜答對,我輸入幾{guess_count}次!!")
-        break
-
-    if user_input < ans:
-        start = user_input + 1
-    else:
-        end = user_input + 1
+guess_number_game()
